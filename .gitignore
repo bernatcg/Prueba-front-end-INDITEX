@@ -87,3 +87,7 @@ typings/
 
 # Distributions
 dist/
+
+#jest
+**/**/__snapshots__
+*.snap

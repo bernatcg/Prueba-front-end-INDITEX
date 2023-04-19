@@ -12,11 +12,14 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
       "*": ["node_modules/*"],
       "@assets/*": ["./assets/*"],
-      "@src/*": ["./src/*"]
-    }
+      "@src/*": ["./src/*"],
+      "@fixture/*": ["fixture/*"]
+    },
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src/**/*", "tools/**/*"]
+  "include": ["src/**/*", "tools/**/*", "fixture/**/*"]
 }

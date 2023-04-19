@@ -24,7 +24,6 @@ export default class PodcastMapper {
       count: data.resultCount,
       episodes: [],
     };
-    console.log('data ', data.results);
     data?.results?.slice(1).forEach((result: any) => {
       const episode: iPodcastEpisode = {
         id: result.trackId,
@@ -37,7 +36,6 @@ export default class PodcastMapper {
       };
       details.episodes.push(episode);
     });
-    console.log('details ', details);
     return details;
   }
 }

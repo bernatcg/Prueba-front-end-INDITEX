@@ -18,15 +18,22 @@ export default function PodcastEpisodeList({ episodes, podcastId }: Props) {
   );
 
   const row = (episode: iPodcastEpisode) => {
+    const validDuration = moment
+      .unix(Number(episode.durationMilisec) / 1000)
+      .isValid();
     return (
-      <tr>
+      <tr key={episode.id}>
         <td>
           <Link to={`/podcast/${podcastId}/episode/${episode.id}`}>
             {episode.title}
           </Link>
         </td>
         <td>{moment(episode.date).format('D/M/YYYY')}</td>
-        <td>{moment.utc(episode.durationMilisec).format('HH:mm')}</td>
+        <td>
+          {validDuration &&
+            moment.unix(Number(episode.durationMilisec) / 1000).format('HH:mm')}
+          {!validDuration && '--:--'}
+        </td>
       </tr>
     );
   };

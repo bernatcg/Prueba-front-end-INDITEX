@@ -29,7 +29,7 @@ function PodcastEpisode() {
     <div className='episode'>
       {podcast && (
         <div className='episode__info'>
-          {podcast && <PodcastInfo podcast={podcast} />}
+          <PodcastInfo podcast={podcast} />
         </div>
       )}
       {episode && (

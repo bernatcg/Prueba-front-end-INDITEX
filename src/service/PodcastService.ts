@@ -10,7 +10,11 @@ const getTop100Podcasts = async (): Promise<iPodcast[]> => {
   let data = StorageService.get<iPodcast[]>('podcasts');
   if (!data) {
     try {
-      const response = await trackPromise(axios.get(process.env.PODCAST_URL));
+      const encoded = encodeURIComponent(
+        `https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json`,
+      );
+      const url = `https://api.allorigins.win/raw?url=${encoded}`;
+      const response = await trackPromise(axios.get(url));
       data = PodcastMapper.mapToPodcast(response.data);
       StorageService.set('podcasts', data);
     } catch (ex) {
@@ -24,7 +28,10 @@ const getTop100Podcasts = async (): Promise<iPodcast[]> => {
 const getPodcastsDetails = async (
   podcastId: number | string,
 ): Promise<iPodcastDetails> => {
-  const url = `https://itunes.apple.com/lookup?id=${podcastId}&media=podcast&entity=podcastEpisode`;
+  const encoded = encodeURIComponent(
+    `https://itunes.apple.com/lookup?id=${podcastId}&media=podcast&entity=podcastEpisode`,
+  );
+  const url = `https://api.allorigins.win/raw?url=${encoded}`;
   let data = StorageService.get<iPodcastDetails>(`podcast-${podcastId}`);
   if (!data) {
     try {

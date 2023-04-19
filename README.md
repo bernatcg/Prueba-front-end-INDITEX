@@ -1,5 +1,7 @@
 # Prueba front-end INDITEX
 
+This is test project for the reactjs application for Inditex.
+
 ## Initialization
 
 run `npm i`
@@ -18,6 +20,6 @@ run `npm run serve`
 
 run `npm run build`
 
-## Configuration
+## Test the application
 
-Update the package.json to set the PODCAST_URL environment variable for development and production modes
+run `npm run test`

@@ -12,7 +12,6 @@ function PodcastList() {
   const [filter, setFilter] = useState<string>(null);
 
   useEffect(() => {
-    console.log('seeffect');
     getTop100Podcasts().then((podcastList: iPodcast[]) => {
       setPodcasts(podcastList);
       setFiltered(podcastList);
