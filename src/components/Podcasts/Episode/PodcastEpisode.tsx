@@ -10,10 +10,8 @@ import { useParams } from 'react-router-dom';
 import PodcastInfo from '../Info/PodcastInfo';
 import './PodcastEpisode.scss';
 
-type Props = {};
-
-function PodcastEpisode({}: Props) {
-  let { podcastId, episodeId } = useParams();
+function PodcastEpisode() {
+  const { podcastId, episodeId } = useParams();
   const [episode, setEpisode] = useState<iPodcastEpisode>(null);
   const [podcast, setPodcast] = useState<iPodcast>(null);
 

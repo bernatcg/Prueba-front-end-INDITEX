@@ -5,9 +5,7 @@ import './Header.scss';
 import Indicator from '../Indicator/Indicator';
 import { usePromiseTracker } from 'react-promise-tracker';
 
-type Props = {};
-
-function Header({}: Props) {
+function Header() {
   const { promiseInProgress } = usePromiseTracker();
 
   return (

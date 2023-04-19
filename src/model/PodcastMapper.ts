@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import iPodcastDetails from './iPodcastDetails';
 import iPodcast from './iPodcast';
 import iPodcastEpisode from './iPodcastEpisode';

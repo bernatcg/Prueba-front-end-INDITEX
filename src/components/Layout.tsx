@@ -4,9 +4,7 @@ import Header from './Common/Header/Header';
 
 import './Layout.scss';
 
-type Props = {};
-
-export default function Layout({}: Props) {
+export default function Layout() {
   return (
     <>
       <Header />

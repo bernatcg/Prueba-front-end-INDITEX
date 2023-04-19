@@ -6,12 +6,10 @@ import PodcastCard from './PodcastCard';
 import './PodcastList.scss';
 import Badge from '@src/components/Common/Badge/Badge';
 
-type Props = {};
-
-function PodcastList({}: Props) {
+function PodcastList() {
   const [podcasts, setPodcasts] = useState<iPodcast[]>([]);
   const [filtered, setFiltered] = useState<iPodcast[]>([]);
-  const [filter, setFilter] = useState<string>('');
+  const [filter, setFilter] = useState<string>(null);
 
   useEffect(() => {
     console.log('seeffect');

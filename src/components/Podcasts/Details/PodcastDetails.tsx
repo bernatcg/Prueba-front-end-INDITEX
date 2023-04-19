@@ -11,12 +11,10 @@ import './PodcastDetails.scss';
 import iPodcastDetails from '@src/model/iPodcastDetails';
 import PodcastEpisodeList from '../Episode/PodcastEpisodeList';
 
-type Props = {};
-
-function PodcastDetails({}: Props) {
-  let { podcastId } = useParams();
-  const [podcast, setPodcast] = useState(null);
-  const [details, setDetails] = useState(null);
+function PodcastDetails() {
+  const { podcastId } = useParams();
+  const [podcast, setPodcast] = useState<iPodcast>(null);
+  const [details, setDetails] = useState<iPodcastDetails>(null);
 
   useEffect(() => {
     getPodcastsDetails(podcastId).then((details: iPodcastDetails) => {
