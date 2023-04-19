@@ -1,0 +1,20 @@
+@import "../../Theme.scss";
+
+.header {
+    --border-color: var(--header-border-color, #eee);
+    --height: var(--header-height, 5rem);
+
+    display: flex;
+    width: 100%;
+    height: var(--height);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        color: var(--primary-color);
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+}

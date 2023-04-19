@@ -1,0 +1,24 @@
+@import "../../Theme.scss";
+
+.indicator {
+    --color: var(--indicator-color, var(--primary-color));
+    --size: var(--indicator-size, 20px);
+    --dot-size: var(--indicator-dot-size, 20px);
+
+    height: var(--size);
+    width: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__dot {
+        width: var(--dot-size);
+        height: var(--dot-size);
+        border-radius: 50%;
+
+        &--busy {
+            background-color: var(--color);
+            position: relative;
+        }
+    }
+}

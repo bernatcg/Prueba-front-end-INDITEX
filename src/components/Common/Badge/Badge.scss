@@ -1,0 +1,18 @@
+@import "../../Theme.scss";
+
+.badge {
+    --color: var(--badge-color, white);
+    --background: var(--badge-background, var(--primary-color));
+
+    align-self: center;
+    color: var(--color);
+    background-color: var(--background);
+    border-radius: 0.4rem;
+    padding: 0.25rem;
+    min-width: 1rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

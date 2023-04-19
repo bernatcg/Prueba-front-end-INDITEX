@@ -1,0 +1,27 @@
+.episode {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  gap: 5rem;
+  padding: 1rem;
+
+  &__data {
+    flex-grow: 1;
+    padding: 1rem;
+
+    .data {
+      &__title {
+        font-weight: bold;
+      }
+
+      &__player {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+        audio {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

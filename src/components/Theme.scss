@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #333;
+  --primary-color: #2579c0;
+  --background-color: white;
+  --headerColor: #111;
+  --header-height: 5rem;
+}
+
+#app {
+  width: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--headerColor);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px white;
+}
+
+::-webkit-scrollbar-corner {
+  background: white;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.scroll--y {
+  overflow-y: auto;
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0), 0 0 0 2px transparent, 0.2em 0.2em 10px rgba(0, 0, 0, 0.2);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.fs-90 {
+  font-size: 0.9rem;
+}
+
+.black,
+a.black {
+  color: black;
+}
+
+.w-100 {
+  width: 100%;
+}

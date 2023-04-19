@@ -1,0 +1,24 @@
+.episodes-list {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-y: auto;
+  height: 100%;
+
+  th {
+    font-weight: bold;
+    text-align: start;
+    border-bottom: 1px solid #ccc;
+  }
+
+  tr {
+    height: 2.4rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  td {
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+}
