@@ -11,7 +11,7 @@ const mockEpisode1: iPodcastEpisode = {
 };
 
 const mockEpisode2: iPodcastEpisode = {
-  id: 1,
+  id: 2,
   title: 'Episode 2',
   date: '2023-04-230T07:00:00Z',
   durationMilisec: '12192000',
