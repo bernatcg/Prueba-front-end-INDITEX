@@ -40,7 +40,7 @@ function PodcastList() {
         <Badge value={filtered.length}></Badge>
         <input
           onChange={handleChange}
-          value={filter}
+          value={filter || ''}
           placeholder='Filter podcasts...'
         ></input>
       </div>
